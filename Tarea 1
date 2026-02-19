@@ -1,0 +1,66 @@
+@startuml
+class Mario
+class Luigi
+class Personaje
+class Goomba
+class Koopa
+class Bowser
+class Champiñon
+class Fireflower
+class Estrella
+class Bloque
+class Moneda
+class Tuberia
+class Bandera
+class Vida
+class Fuego
+class Caparazon
+class Bulletbill
+class Asta 
+class Castillo
+class Estructura
+class NPC
+class Daño
+class Plantapiraña
+class Lakitu
+class Spiny
+class Paratroopa
+class Fireball
+class Enemigo
+class Cheep
+class Plataforma
+Mario --|> Personaje
+Luigi --|> Personaje
+Bowser --|> Enemigo
+Goomba --|> Enemigo
+Koopa --|> Enemigo
+Mario o-- Champiñon
+Luigi o-- Champiñon 
+Mario o-- Fireflower
+Luigi o-- Fireflower
+Mario o-- Estrella
+Luigi o-- Estrella
+Plataforma --|> Bloque
+Mario o-- Moneda
+Luigi o-- Moneda
+Mario o-- Tuberia
+Luigi o-- Tuberia
+Asta *-- Bandera
+Mario *-- Vida
+Luigi *-- Vida
+Mario o-- Fuego
+Luigi o-- Fuego
+Koopa *-- Caparazon
+Paratroopa *-- Caparazon
+Bulletbill --|> Enemigo
+Castillo --|> Estructura
+Lakitu --|> NPC
+Cheep --|> NPC
+Mario *-- Daño
+Luigi *-- Daño
+Plantapiraña --|> Enemigo
+Spiny --|> Enemigo
+Paratroopa --|> Enemigo
+Mario o-- Fireball
+Luigi o-- Fireball
+@enduml
