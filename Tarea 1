@@ -1,5 +1,7 @@
 @startuml
-class Mario
+class Mario{
+    + Viajar(Tuberia)
+}
 class Luigi
 class Personaje
 class Goomba
