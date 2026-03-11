@@ -6,22 +6,22 @@ class Usuario {
 class Mario {
     + Viajar(Tuberia)
     + Comer(Item)
-    - int vida
+    - vida
 }
 
 class Luigi {
     + Comer(Item)
-    - int vida
+    - vida
 }
 
 class Personaje {
-    - int salud
+    - salud
     + Morir()
     + Moverse()
 }
 
 class Enemigo {
-    - int vida
+    - vida
     + Atacar()
     + Morir()
 }
@@ -36,7 +36,7 @@ class Koopa {
 }
 
 class Bowser {
-    - int poder
+    - poder
     + LanzarFuego()
     + Morir()
 }
@@ -104,7 +104,7 @@ class Fireball {
 }
 
 class Bloque {
-    - Item contenido
+    - contenido
     + Explotar() : Item
 }
 
@@ -121,11 +121,11 @@ class Caparazon {
 }
 
 class Vida {
-    - int cantidad
+    - cantidad
 }
 
 class Daño {
-    - int cantidad
+    - cantidad
 }
 
 class Estructura {
