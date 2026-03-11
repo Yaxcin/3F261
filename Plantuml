@@ -1,68 +1,191 @@
 @startuml
-class Mario{
-    + Viajar(Tuberia)
+class Usuario {
+    + Jugar(Mario)
 }
-class Luigi
-class Personaje
-class Goomba
-class Koopa
-class Bowser
-class Champiñon
-class Fireflower
-class Estrella
-class Bloque
-class Moneda
-class Tuberia
-class Bandera
-class Vida
-class Fuego
-class Caparazon
-class Bulletbill
-class Asta 
-class Castillo
-class Estructura
-class NPC
-class Daño
-class Plantapiraña
-class Lakitu
-class Spiny
-class Paratroopa
-class Fireball
-class Enemigo
-class Cheep
-class Plataforma
+
+class Mario {
+    + Viajar(Tuberia)
+    + Comer(Item)
+    - int vida
+}
+
+class Luigi {
+    + Comer(Item)
+    - int vida
+}
+
+class Personaje {
+    # int salud
+    + Morir()
+    + Moverse()
+}
+
+class Enemigo {
+    # int vida
+    + Atacar()
+    + Morir()
+}
+
+class Goomba {
+    + Morir()
+}
+
+class Koopa {
+    - Vida vida
+    + Morir()
+}
+
+class Bowser {
+    - int poder
+    + LanzarFuego()
+    + Morir()
+}
+
+class Bulletbill {
+    + Morir()
+}
+
+class Plantapiraña {
+    + Atacar()
+    + Morir()
+}
+
+class Spiny {
+    + Morir()
+}
+
+class Paratroopa {
+    + Volar()
+    + Morir()
+}
+
+class Lakitu {
+    + LanzarSpiny()
+}
+
+class Cheep {
+    + Nadar()
+}
+
+class NPC {
+    + Interactuar()
+}
+
+class Item {
+    + Usar()
+}
+
+class Champiñon {
+    + Usar()
+}
+
+class Fireflower {
+    + Usar()
+}
+
+class Estrella {
+    + Usar()
+}
+
+class Moneda {
+    + Usar()
+}
+
+class Hongo {
+    + Usar()
+}
+
+class Fuego {
+    + Usar()
+}
+
+class Fireball {
+    + Usar()
+}
+
+class Bloque {
+    - Item contenido
+    + Explotar() : Item
+}
+
+class Plataforma {
+    + Soportar()
+}
+
+class Tuberia {
+    + Transportar()
+}
+
+class Caparazon {
+    + Usar()
+}
+
+class Vida {
+    - int cantidad
+}
+
+class Daño {
+    - int cantidad
+}
+
+class Estructura {
+    + Entrar()
+}
+
+class Castillo {
+    + Entrar()
+}
+
+class Asta {
+    + Escalar()
+}
+
+class Bandera {
+    + Capturar()
+}
+
+Usuario o-- Mario
 Mario --|> Personaje
 Luigi --|> Personaje
-Bowser --|> Enemigo
-Goomba --|> Enemigo
-Koopa --|> Enemigo
+Mario *-- Vida
+Luigi *-- Vida
+Mario *-- Daño
+Luigi *-- Daño
 Mario o-- Champiñon
-Luigi o-- Champiñon 
+Luigi o-- Champiñon
 Mario o-- Fireflower
 Luigi o-- Fireflower
 Mario o-- Estrella
 Luigi o-- Estrella
-Plataforma --|> Bloque
 Mario o-- Moneda
 Luigi o-- Moneda
 Mario o-- Tuberia
 Luigi o-- Tuberia
-Asta *-- Bandera
-Mario *-- Vida
-Luigi *-- Vida
 Mario o-- Fuego
 Luigi o-- Fuego
-Koopa *-- Caparazon
-Paratroopa *-- Caparazon
-Bulletbill --|> Enemigo
-Castillo --|> Estructura
-Lakitu --|> NPC
-Cheep --|> NPC
-Mario *-- Daño
-Luigi *-- Daño
-Plantapiraña --|> Enemigo
-Spiny --|> Enemigo
-Paratroopa --|> Enemigo
 Mario o-- Fireball
 Luigi o-- Fireball
+Mario o-- Bloque
+Bowser --|> Enemigo
+Goomba --|> Enemigo
+Koopa --|> Enemigo
+Koopa *-- Caparazon
+Paratroopa *-- Caparazon
+Paratroopa --|> Enemigo
+Bulletbill --|> Enemigo
+Plantapiraña --|> Enemigo
+Spiny --|> Enemigo
+Lakitu --|> NPC
+Cheep --|> NPC
+Champiñon --|> Item
+Fireflower --|> Item
+Estrella --|> Item
+Moneda --|> Item
+Hongo --|> Item
+Fuego --|> Item
+Fireball --|> Item
+Bloque *-- Item
+Plataforma --|> Bloque
+Castillo --|> Estructura
+Asta *-- Bandera
 @enduml
