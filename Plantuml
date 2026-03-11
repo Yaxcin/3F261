@@ -15,13 +15,13 @@ class Luigi {
 }
 
 class Personaje {
-    # int salud
+    - int salud
     + Morir()
     + Moverse()
 }
 
 class Enemigo {
-    # int vida
+    - int vida
     + Atacar()
     + Morir()
 }
@@ -188,4 +188,5 @@ Bloque *-- Item
 Plataforma --|> Bloque
 Castillo --|> Estructura
 Asta *-- Bandera
+
 @enduml
